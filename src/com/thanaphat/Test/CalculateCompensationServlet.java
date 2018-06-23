@@ -22,17 +22,22 @@ public class CalculateCompensationServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		ConnectManager con = new ConnectManager();
-		Connection conn = con.ConnectDB();
+		try(Connection conn = con.ConnectDB()) {
 		String firstname = "";
 		String lastname = "";
 		String typeName = "";
 		int emTypeID = 0;
-		try {
+		double emCom = 0;
+
+		
+			
 		Statement st = conn.createStatement();
+		
 		String employeeID = request.getParameter("employeeID");
 		System.out.println(employeeID);
 	
-		String sql = "SELECT em.firstname,em.lastname,emType.typeName,emType.employeeTypeID FROM EmployeeBean AS em INNER JOIN EmployeeTypeBean AS emType ON em.employeeTypeID = emType.employeeTypeID WHERE em.employeeID = "+employeeID+";";
+		String sql = "SELECT em.firstname,em.lastname,emType.typeName,emType.employeeTypeID FROM EmployeeBean AS em INNER JOIN EmployeeTypeBean AS emType ON em.employeeTypeID = emType.employeeTypeID WHERE em.employeeID = '"+employeeID+"';";
+		
 		
 			ResultSet resultData = st.executeQuery(sql);
 			resultData.next();
@@ -41,18 +46,22 @@ public class CalculateCompensationServlet extends HttpServlet {
 			typeName = resultData.getString("typeName");
 			emTypeID = resultData.getInt("employeeTypeID");
 			
-			if(emTypeID ==1) {
-				
-			}else if(emTypeID==2) {
-				
-			}
 			
 			
+			resultData.close();
+			st.close();
+			conn.close();
+			
+			request.setAttribute("firstname", firstname);
+			request.setAttribute("lastname", lastname);
+			request.setAttribute("typeName", typeName);
+			request.setAttribute("employeeID", employeeID);
+			request.setAttribute("emTypeID", emTypeID);
+			request.getRequestDispatcher("calculateCom.jsp").forward(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
 	}
 
 }

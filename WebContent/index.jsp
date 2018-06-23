@@ -25,7 +25,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
            <a class="dropdown-item" href="oopTest.jsp">บันทึกข้อมูลพนักงาน</a>
           <a class="dropdown-item" href="employeelist.jsp">รายชื่อพนักงาน</a>
-          <a class="dropdown-item" href="#">ประวัตการคำนวณ</a>
+          <a class="dropdown-item" href="historyCalculate.jsp">ประวัตการคำนวณ</a>
         </div>
       </li>
      

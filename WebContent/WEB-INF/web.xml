@@ -16,9 +16,17 @@
     <servlet-name>CalculateCompensationServlet</servlet-name>
     <servlet-class>com.thanaphat.Test.CalculateCompensationServlet</servlet-class>
   </servlet>
-   <servlet>
+  <servlet>
     <servlet-name>SaveEmployee</servlet-name>
     <servlet-class>com.thanaphat.Test.SaveEmployee</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>ShowHistoryCalculateServlet</servlet-name>
+    <servlet-class>com.thanaphat.Test.ShowHistoryCalculateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CalculateCompensationByTypeServlet</servlet-name>
+    <servlet-class>com.thanaphat.Test.CalculateCompensationByTypeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ParkingCalculate</servlet-name>
@@ -35,5 +43,13 @@
   <servlet-mapping>
     <servlet-name>CalculateCompensationServlet</servlet-name>
     <url-pattern>/calculateCompensation.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CalculateCompensationByTypeServlet</servlet-name>
+    <url-pattern>/calculateCompensationByTypeServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ShowHistoryCalculateServlet</servlet-name>
+    <url-pattern>/showhistory.jsp</url-pattern>
   </servlet-mapping>
 </web-app>

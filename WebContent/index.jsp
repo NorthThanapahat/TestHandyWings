@@ -18,8 +18,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.jsp">Logic Test <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="oopTest.jsp">OOP Test</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CalculateCompensation
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="oopTest.jsp">บันทึกข้อมูลพนักงาน</a>
+          <a class="dropdown-item" href="employeelist.jsp">รายชื่อพนักงาน</a>
+          <a class="dropdown-item" href="#">ประวัตการคำนวณ</a>
+        </div>
       </li>
      
       
@@ -85,11 +92,11 @@
 				<div id="calculate_form" class ="form-row justify-content-md-center">
 					
 						<div class="col-sm-6">
-							<input type = "text" class = "form-control" pattern="([0-1]{1}[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" placeholder="Parking Start Time (18:00)" name = "startTime" id ="endTime" value = "">
+							<input type = "text" class = "form-control" pattern="([0-1]{1}[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" placeholder="Parking Start Time (18:00)" name = "startTime" id ="endTime" value = "" required>
 						</div>
 						
 						<div class="col-sm-6 mb-2">
-							<input type = "text" class = "form-control" pattern="([0-1]{1}[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" name="endTime" id ="endTime" value = "" placeholder="Parking End Time (20:00)">
+							<input type = "text" class = "form-control" pattern="([0-1]{1}[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" name="endTime" id ="endTime" value = "" placeholder="Parking End Time (20:00)" required>
 						</div>
 						<div class="col-sm-12 text-center margin_top_10">
 							<button type="submit" class="btn btn-primary text-center">Calculate Price For Car Parking </button>

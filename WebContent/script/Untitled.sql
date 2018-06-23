@@ -1,0 +1,1 @@
+SELECT * FROM employeeBean order by id  Desc Limit 1;

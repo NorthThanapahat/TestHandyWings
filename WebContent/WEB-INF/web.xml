@@ -12,6 +12,14 @@
     <servlet-name>SplitAddressServlet</servlet-name>
     <servlet-class>com.thanaphat.Test.SplitAddressServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>CalculateCompensationServlet</servlet-name>
+    <servlet-class>com.thanaphat.Test.CalculateCompensationServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>SaveEmployee</servlet-name>
+    <servlet-class>com.thanaphat.Test.SaveEmployee</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>ParkingCalculate</servlet-name>
     <url-pattern>/calculate</url-pattern>
@@ -19,5 +27,13 @@
   <servlet-mapping>
     <servlet-name>SplitAddressServlet</servlet-name>
     <url-pattern>/splitAddress</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveEmployee</servlet-name>
+    <url-pattern>/saveEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CalculateCompensationServlet</servlet-name>
+    <url-pattern>/calculateCompensation.jsp</url-pattern>
   </servlet-mapping>
 </web-app>

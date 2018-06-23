@@ -9,7 +9,7 @@ public class ConnectManager {
 		Connection connectDB = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connectDB = DriverManager.getConnection("jdbc:mysql://localhost:3306/calculatecompensation", "root", "12345678");
+			connectDB = DriverManager.getConnection("jdbc:mysql://localhost:3306/CalculateCompensationTransactionBean", "root", "northregion");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

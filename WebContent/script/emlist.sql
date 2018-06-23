@@ -1,0 +1,1 @@
+SELECT EmployeeBean.employeeID,EmployeeBean.firstname,EmployeeBean.lastname,EmployeeBean.birthday,EmployeeTypeBean.typeName FROM EmployeeBean INNER JOIN  EmployeeTypeBean ON EmployeeBean.employeeTypeID = EmployeeTypeBean.employeeTypeID;
